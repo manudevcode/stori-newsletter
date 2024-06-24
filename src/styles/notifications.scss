@@ -1,0 +1,14 @@
+.notification {
+  @apply shadow-md;
+  button[aria-label='Close'] {
+    transition: all 0.2s ease;
+    opacity: 0;
+  }
+
+  &:hover {
+    button[aria-label='Close'] {
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+  }
+}

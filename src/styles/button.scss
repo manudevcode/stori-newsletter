@@ -1,0 +1,13 @@
+.button {
+  @apply  h-10 px-2 py-2 transition-all text-sm bg-primary;
+  
+  &.secondary {
+    @apply bg-green-50;
+  }
+
+  &.large {
+    @apply h-14 text-lg;
+  }
+
+
+}

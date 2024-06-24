@@ -1,0 +1,18 @@
+.input {
+  @apply rounded-xl p-4 bg-green-50 border-[1px] border-transparent text-primary;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:focus {
+    background-color: white;
+    @apply border-primary;
+  }
+
+  &.error {
+    @apply border-red-300;
+  }
+
+  &::placeholder {
+    @apply text-gray-400
+  }
+}
