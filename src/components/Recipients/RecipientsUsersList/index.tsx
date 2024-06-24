@@ -1,5 +1,5 @@
 import { useRecipients } from "../../../hooks/useRecipients";
-import { Recipient } from "../../../types/recipient";
+import { Recipient, UserRecipientList } from "../../../types/recipient";
 import { EmptyState } from "../../EmptyState";
 import { Loader } from "../../Loader";
 
@@ -35,11 +35,13 @@ export const RecipientsUsersList = () => {
                     {recipient?.email}
                   </th>
                   <td className="px-6 py-4">
-                    {recipient?.recipientsList?.map(({ name }) => (
-                      <span className="rounded-lg bg-primary py-1 px-2 text-secondary m-1">
-                        {name}
-                      </span>
-                    ))}
+                    {(recipient?.recipientsList as UserRecipientList)?.map(
+                      ({ name }) => (
+                        <span className="rounded-lg bg-primary py-1 px-2 text-secondary m-1">
+                          {name}
+                        </span>
+                      )
+                    )}
                   </td>
                 </tr>
               ))}

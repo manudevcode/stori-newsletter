@@ -70,7 +70,7 @@ export const RecipientsListForm = () => {
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e?.target?.files) {
       setFile(e?.target?.files[0]);
-      e.target.value = null;
+      e.target.value = "";
     }
   };
   return (
